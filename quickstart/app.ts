@@ -9,8 +9,14 @@ import {Component, View, bootstrap} from 'angular2/angular2';
     selector: 'my-app'
 })
 @View({
-    template: '<h1>Hello {{ name }}</h1>'
-
+    template: `
+    <div class="row">
+        <h3>Quickstart Angular 2</h3>
+    </div>
+    <div class="row">
+        <p>My name: {{ name }}</p>
+    </div>
+   `
 })
 
 // Component controller
