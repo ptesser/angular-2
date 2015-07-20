@@ -4,7 +4,7 @@
 
 ### Commit
 [main dir name]: name of the main directory that commit refer
-After [], I follow Git Commit Message Conventions: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.uyo6cb12dt6w
+after [...], I follow Git Commit Message Conventions: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.uyo6cb12dt6w
 
 ## Resources
 
