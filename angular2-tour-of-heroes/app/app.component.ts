@@ -1,26 +1,16 @@
-import {Component} from 'angular2/core';
+// external modules
+import {Component}  from 'angular2/core';
 
-// don't generate code if it isn't used
-interface Hero{
-    id:     number;
-    name:   string;
-}
-
+// application modules
+import {Hero}                   from './hero';
+import {HeroDetailComponent}    from './hero-detail.component';
 
 // a class becomes an Angular component when we give it metadata. Angular needs the metadata to understand how to construct the view and how the component interacts with other parts of the application.
 @Component({
     selector: 'app',
     template: `
     <h1>{{title}}</h1>
-
-    <div *ngIf="selectedHero">
-        <h2>{{selectedHero.name}} details!</h2>
-        <div><label>id: </label>{{selectedHero.id}}</div>
-        <div>
-            <label>name: </label>
-            <input [(ngModel)]="selectedHero.name" placeholder="name"/>
-        </div>
-    </div>
+    <hero-detail [hero]="selectedHero"></hero-detail>
 
     <h2>My Heroes</h2>
     <ul class="heroes">
@@ -80,7 +70,8 @@ interface Hero{
         margin-right: .8em;
         border-radius: 4px 0px 0px 4px;
       }
-   `]
+   `],
+    directives: [HeroDetailComponent]
 })
 
 // controller per la view utilizzata nel class decorator
