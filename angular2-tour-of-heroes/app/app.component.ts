@@ -1,8 +1,10 @@
 // external modules
 import {Component}  from 'angular2/core';
+import {OnInit}     from 'angular2/core';
 
 // application modules
 import {Hero}                   from './hero';
+import {HeroService}            from './hero.service'
 import {HeroDetailComponent}    from './hero-detail.component';
 
 // a class becomes an Angular component when we give it metadata. Angular needs the metadata to understand how to construct the view and how the component interacts with other parts of the application.
@@ -71,31 +73,33 @@ import {HeroDetailComponent}    from './hero-detail.component';
         border-radius: 4px 0px 0px 4px;
       }
    `],
+    providers:  [HeroService],
     directives: [HeroDetailComponent]
 })
 
 // controller per la view utilizzata nel class decorator
 export class AppComponent{
 
-    public title : string   = 'Tour of Hero';
-    public heroes           = HEROES;
+    public title        : string   = 'Tour of Hero';
+    public heroes       : Hero[];
     public selectedHero : Hero;
+
+    constructor(private _heroService: HeroService) {
+        // don't call some providers inside constructors
+    }
+
+    ngOnInit(){
+        this.getHeroes();
+    }
 
     onSelect(hero: Hero) {
         this.selectedHero = hero;
     }
+
+    getHeroes(){
+        this._heroService.getHeroes()
+            .then(heroes => this.heroes = heroes);
+    }
 }
 
 
-var HEROES: Hero[] = [
-    { "id": 11, "name": "Mr. Nice" },
-    { "id": 12, "name": "Narco" },
-    { "id": 13, "name": "Bombasto" },
-    { "id": 14, "name": "Celeritas" },
-    { "id": 15, "name": "Magneta" },
-    { "id": 16, "name": "RubberMan" },
-    { "id": 17, "name": "Dynama" },
-    { "id": 18, "name": "Dr IQ" },
-    { "id": 19, "name": "Magma" },
-    { "id": 20, "name": "Tornado" }
-];
