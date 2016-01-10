@@ -1,4 +1,6 @@
-import {bootstrap} from 'angular2/platform/browser';
-import Greeting from './greeting/greeting';
+import {bootstrap}    from 'angular2/platform/browser';
+import TodoList       from './todolist/todolist.component';
 
-bootstrap(Greeting);
+
+// todolist component is the application root
+bootstrap(TodoList);

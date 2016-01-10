@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/bootstrap.ts"],"names":[],"mappings":";;;;;;;;;;;YAKA,mBAAS,CAAC,4BAAQ,CAAC,CAAC","file":"app/bootstrap.js","sourcesContent":["import {bootstrap}    from 'angular2/platform/browser';\nimport TodoList       from './todolist/todolist.component';\n\n\n// todolist component is the application root\nbootstrap(TodoList);\n"],"sourceRoot":"/source/"}
