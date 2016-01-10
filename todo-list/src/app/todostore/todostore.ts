@@ -13,5 +13,8 @@ export class TodoStore {
         });
     }
 
-
+    removeItem(removedItem: ITodoItem) {
+        const index = this.items.indexOf(removedItem);
+        this.items.splice(index, 1);
+    }
 }

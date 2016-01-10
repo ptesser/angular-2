@@ -12,6 +12,10 @@ System.register([], function(exports_1) {
                         text: newItem
                     });
                 };
+                TodoStore.prototype.removeItem = function (removedItem) {
+                    var index = this.items.indexOf(removedItem);
+                    this.items.splice(index, 1);
+                };
                 return TodoStore;
             })();
             exports_1("TodoStore", TodoStore);
