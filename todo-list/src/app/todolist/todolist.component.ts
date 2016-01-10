@@ -1,4 +1,7 @@
-import {Component} from 'angular2/core';
+import {Component}          from 'angular2/core';
+import {ViewEncapsulation}  from 'angular2/core';
+
+import {TodoStore}          from './../todostore/todostore';
 
 
 // code imports the Component decorator, a new feature in TypeScript 1.5 which is based on an ES7 proposal
@@ -6,10 +9,22 @@ import {Component} from 'angular2/core';
     selector:       'todo-list',
     templateUrl:    'app/todolist/todolist.html',
     styleUrls:      ['app/todolist/todolist.css'],
-    // encapsulation:  ViewEncapsulation.Native     //  using real web components for CSS scope
+    encapsulation:  ViewEncapsulation.Native     //  using real web components for CSS scope #shadow root
 })
 
 
 export default class TodoList {
+
+    public newItem: string  = 'test';
+    public store:   TodoStore;
+
+    constructor(store: TodoStore) {
+        this.store = store;
+    }
+
+    addItem() {
+        this.store.addItem(this.newItem);
+        this.newItem = '';
+    }
 
 }
