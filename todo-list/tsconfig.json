@@ -19,7 +19,13 @@
     "node_modules"
   ],
   "files": [
-    "src/bootstrap.ts",
-    "src/component/greeting/greeting.ts"
-  ]
+    "src/app/bootstrap.ts",
+    "src/app/todoitem/todoitem.component.ts",
+    "src/app/todolist/todolist.component.ts",
+    "src/app/todostore/todoitem.ts",
+    "src/app/todostore/todostore.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }
