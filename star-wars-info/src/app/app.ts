@@ -1,11 +1,11 @@
 /*
  * Angular 2 decorators and services
  */
-import {Component} from 'angular2/core';
-import {RouteConfig, Router} from 'angular2/router';
+import {Component}              from 'angular2/core';
+import {RouteConfig, Router}    from 'angular2/router';
 
-import {Home} from './home';
-import {AppState} from './app.service';
+import {Home}                   from './home';
+import {AppState}               from './app.service';
 
 /*
  * App Component
@@ -70,9 +70,9 @@ import {AppState} from './app.service';
   { path: '/about', name: 'About', loader: () => require('es6-promise!./about')('About') },
 ])
 export class App {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
-  name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
+  angularclassLogo  = 'assets/img/angularclass-avatar.png';
+  name              = 'Angular 2 Webpack Starter';
+  url               = 'https://twitter.com/AngularClass';
 
   constructor(public appState: AppState) {}
 

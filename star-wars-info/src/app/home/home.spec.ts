@@ -7,15 +7,15 @@ import {
   TestComponentBuilder
 } from 'angular2/testing';
 
-import {Component, provide} from 'angular2/core';
-import {BaseRequestOptions, Http} from 'angular2/http';
-import {MockBackend} from 'angular2/http/testing';
-import {WebpackState} from 'angular2-hmr';
+import {Component, provide}         from 'angular2/core';
+import {BaseRequestOptions, Http}   from 'angular2/http';
+import {MockBackend}                from 'angular2/http/testing';
+import {WebpackState}               from 'angular2-hmr';
 
 // Load the implementations that should be tested
-import {Home} from './home';
-import {Title} from './services/title';
-import {AppState} from '../app.service';
+import {Home}       from './home';
+import {Title}      from './services/title';
+import {AppState}   from '../app.service';
 
 describe('Home', () => {
   // provide our implementations or mocks to the dependency injector

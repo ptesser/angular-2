@@ -1,5 +1,5 @@
-import {Injectable} from 'angular2/core';
-import {WebpackState} from 'angular2-hmr';
+import {Injectable}     from 'angular2/core';
+import {WebpackState}   from 'angular2-hmr';
 
 @Injectable()
 export class AppState {
