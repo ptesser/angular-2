@@ -1,7 +1,7 @@
-import {Component} from 'angular2/core';
-import {AppState} from '../app.service';
+import {Component}  from 'angular2/core';
+import {AppState}   from '../app.service';
 
-import {Title} from './services/title';
+import {Title}  from './services/title';
 import {XLarge} from './directives/x-large';
 
 @Component({

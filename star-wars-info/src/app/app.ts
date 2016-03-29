@@ -5,6 +5,7 @@ import {Component}              from 'angular2/core';
 import {RouteConfig, Router}    from 'angular2/router';
 
 import {Home}                   from './home';
+import {HeaderMenu}             from './header-menu';
 import {AppState}               from './app.service';
 
 /*
@@ -48,6 +49,8 @@ import {AppState}               from './app.service';
         </ul>
       </nav>
     </header>
+
+    <header-menu></header-menu>
 
     <main>
       <router-outlet></router-outlet>
