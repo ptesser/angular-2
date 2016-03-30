@@ -16,7 +16,7 @@ import {AppState}               from './app.service';
   selector: 'app',
   pipes: [ ],
   providers: [ ],
-  directives: [ ],
+  directives: [HeaderMenu],
   styles: [`
     nav ul {
       display: inline;
@@ -35,7 +35,7 @@ import {AppState}               from './app.service';
   template: `
     <header>
       <nav>
-        <h1>Hello {{ name }}</h1>
+        <h1>{{ name }}</h1>
         <ul>
           <li router-active>
             <a [routerLink]=" ['Index'] ">Index</a>
@@ -74,7 +74,7 @@ import {AppState}               from './app.service';
 ])
 export class App {
   angularclassLogo  = 'assets/img/angularclass-avatar.png';
-  name              = 'Angular 2 Webpack Starter';
+  name              = 'Star Wars Info';
   url               = 'https://twitter.com/AngularClass';
 
   constructor(public appState: AppState) {}

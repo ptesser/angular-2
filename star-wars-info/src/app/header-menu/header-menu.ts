@@ -10,7 +10,10 @@ import {Component} from 'angular2/core';
 
 export class HeaderMenu{
     constructor(){
-        console.log('Header Menu costruitot');
+        console.log('Header Menu costruito');
     }
 
+    ngOnInit(){
+        console.log('Header Menu ngOnInit chiamato');
+    }
 }

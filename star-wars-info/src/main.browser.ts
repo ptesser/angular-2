@@ -1,21 +1,21 @@
 /*
  * Providers provided by Angular
  */
-import {bootstrap} from 'angular2/platform/browser';
-import {provideInitialState, hotModuleReplacement} from 'angular2-hmr';
+import {bootstrap}                                  from 'angular2/platform/browser';
+import {provideInitialState, hotModuleReplacement}  from 'angular2-hmr';
 /*
 * Platform and Environment
 * our providers/directives/pipes
 */
-import {DIRECTIVES, PIPES, PROVIDERS} from './platform/browser';
-import {ENV_PROVIDERS} from './platform/environment';
+import {DIRECTIVES, PIPES, PROVIDERS}   from './platform/browser';
+import {ENV_PROVIDERS}                  from './platform/environment';
 
 /*
 * App Component
 * our top level component that holds all of our components
 */
-import {AppState} from './app/app.service';
-import {App} from './app/app';
+import {AppState}   from './app/app.service';
+import {App}        from './app/app';
 
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
