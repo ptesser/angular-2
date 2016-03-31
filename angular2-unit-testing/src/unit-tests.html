@@ -4,6 +4,7 @@
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
   <title>Ng App Unit Tests</title>
   <link rel="stylesheet" href="../node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+
   <script src="../node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
   <script src="../node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
   <script src="../node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
@@ -11,8 +12,26 @@
 
 <body>
 
-    <!-- Unit Testing Chapter #1: Proof of life.  -->
-    <script src="1st.spec.js"></script>
+    <script src="../node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
 
+    <script>
+
+        System.config({
+           packages: {
+             './': {defaultExtension: 'js'}
+           }
+        });
+
+        System.import('hero/hero.spec')
+            .then( () => {
+                window.onload
+            })
+            .catch(console.error.bind(console));
+
+    </script>
+
+    <script src="1st.spec.js"></script>
+    <script src="hero/hero.spec.js"></script>
 </body>
 </html>
