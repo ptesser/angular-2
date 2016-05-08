@@ -43,4 +43,6 @@ Create a symbolic link to **back-end/** directory inside **htdocs/** folder.
 - [ ] create symbolic link to the back-end in MAMP
 - [ ] create database
 - [ ] configure Lumen
+- [ ] add compiler for SASS
+- [ ] add CSS framework
 - [ ] To Plan
