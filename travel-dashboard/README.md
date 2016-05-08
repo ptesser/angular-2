@@ -40,7 +40,7 @@ Create a symbolic link to **back-end/** directory inside **htdocs/** folder.
 
 - [x] create Angular scaffold via cli
 - [x] create Lumen scaffold via composer
-- [ ] create symbolic link to the back-end in MAMP
+- [x] create symbolic link to the back-end in MAMP
 - [ ] create database
 - [ ] configure Lumen
 - [ ] add compiler for SASS
