@@ -34,3 +34,13 @@ This repository is use to
 Use MAMP to run Apache web server.
 
 Create a symbolic link to **back-end/** directory inside **htdocs/** folder.
+
+
+## TODO
+
+- [x] create Angular scaffold via cli
+- [x] create Lumen scaffold via composer
+- [ ] create symbolic link to the back-end in MAMP
+- [ ] create database
+- [ ] configure Lumen
+- [ ] To Plan
