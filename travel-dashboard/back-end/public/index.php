@@ -23,6 +23,10 @@ $app = require __DIR__.'/../bootstrap/app.php';
 | the client's browser allowing them to enjoy the creative
 | and wonderful application we have prepared for them.
 |
+| Reference solution to run API https://laracasts.com/discuss/channels/lumen/problem-accessing-lumen-api
+|
 */
 
-$app->run();
+
+$request = Illuminate\Http\Request::capture();
+$app->run($request);
