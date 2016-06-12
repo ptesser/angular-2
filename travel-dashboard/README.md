@@ -1,5 +1,5 @@
 # Travel Dashboard
-This repository is use to
+This repository is use to manage code of Travel Dashboard. A personal webapp to insert all information about my travels.
 
 
 ## Technology
@@ -35,13 +35,19 @@ Use MAMP to run Apache web server.
 
 Create a symbolic link to **back-end/** directory inside **htdocs/** folder.
 
+## Database
+
+Name: **travel-dashboard**
+
+Codifica: **UTF8 general CI**
+
 
 ## TODO
 
 - [x] create Angular scaffold via cli
 - [x] create Lumen scaffold via composer
 - [x] create symbolic link to the back-end in MAMP
-- [ ] create database
+- [x] create database
 - [ ] configure Lumen
 - [ ] add compiler for SASS
 - [ ] add CSS framework
