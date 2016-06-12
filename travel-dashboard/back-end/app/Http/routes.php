@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Response;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,14 +13,23 @@
 |
 */
 
-$app->get('/app-version', function () use ($app) {
-    return $app->version();
+
+$app->group(['prefix' => 'utility'], function($app){
+
+    $app->get('/app-version', function () use ($app) {
+        return $app->version();
+    });
+
+    $app->get('/key', function(){
+        return str_random(32);
+    });
+
 });
 
-$app->get('/key', function(){
-    return str_random(32);
+
+$app->group(['prefix' => 'api/v1', 'namespace' => 'App\Http\Controllers'], function($app){
+
+    $app->get('/users', 'UsersController@get');
+
 });
 
-$app->get('/users', function(){
-
-});
