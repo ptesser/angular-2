@@ -1,6 +1,12 @@
 # Travel Dashboard
 This repository is use to manage code of Travel Dashboard. A personal webapp to insert all information about my travels.
 
+## Use Case
+
+- User can create a travel;
+- User can associate an accomodation to the travel;
+- User can associate the expenses of the travel;
+- Admin can create locations, countries
 
 ## Technology
 
@@ -39,8 +45,14 @@ Create a symbolic link to **back-end/** directory inside **htdocs/** folder.
 
 Name: **travel-dashboard**
 
-Codifica: **UTF8 general CI**
+Encoding: **UTF8 general CI**
 
+### Entity
+Use command: `php artisan make:migration create_users_table`
+
+Use command: `php artisan migrate` to run all migrations.
+
+Use command: `php artisan db:seed` to run all seeders inside database. Before use it remember to use command `composer dump-autoload -o` if you've created new seeder's classes.
 
 ## TODO
 
@@ -48,7 +60,8 @@ Codifica: **UTF8 general CI**
 - [x] create Lumen scaffold via composer
 - [x] create symbolic link to the back-end in MAMP
 - [x] create database
-- [ ] configure Lumen
+- [x] configure Lumen
+- [ ] configure database with migrations and seeders
 - [ ] add compiler for SASS
 - [ ] add CSS framework
 - [ ] To Plan
