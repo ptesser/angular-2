@@ -31,5 +31,6 @@ $app->group(['prefix' => 'api/v1', 'namespace' => 'App\Http\Controllers'], funct
 
     $app->get('/users', 'UsersController@get');
 
-});
+    $app->get('/countries', 'CountriesController@get');
 
+});
