@@ -1,0 +1,9 @@
+<input #newContact placeholder="Add contact"
+    (keyup.enter)="addContact(newContact.value); newContact.value = ''">
+
+<ul>
+    <li *ngFor="let contact of store.contacts">
+        <contact-component [contact]="contact"></contact-component>
+    </li>
+
+</ul>
