@@ -1,5 +1,9 @@
 # Contact List made with Redux and Immutable.js
 
+This repository is used to manage code of a Contact List simple application created following a tutorial linked before.
+
+This is done only for educational purpose.
+
 ## Configuration files
 - **package.json**: lists packages the Contact list app depends on and defines some useful scripts;
 - **tsconfig.json**: is the Typescript compiler configuration file;
@@ -11,6 +15,11 @@
 1. `npm install`
 2. `npm run typings install`
 
+## Files location
+
+I follow the tutoral linked in References sections to see where insert main files.
+
+Follow only **Step 1** section of the Quickstart.
 
 ## References
 
