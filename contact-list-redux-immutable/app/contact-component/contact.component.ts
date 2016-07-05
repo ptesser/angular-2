@@ -1,10 +1,10 @@
 import { Component, Input }                     from '@angular/core';
-import { ContactStore, Contact as ContactModel} from './contact-store';
+import { ContactStore, Contact as ContactModel} from '../contact-store';
 
 @Component({
     selector:       'contact-component',
-    templateUrl :   'app/contact.html',
-    styleUrls:      ['app/contact.css']
+    templateUrl :   'app/contact-component/contact.html',
+    styleUrls:      ['app/contact-component/contact.css']
 
 })
 

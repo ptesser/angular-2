@@ -9,8 +9,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var contact_store_1 = require('./contact-store');
-var contact_component_1 = require('./contact.component');
+var contact_store_1 = require('../contact-store');
+var contact_component_1 = require('../contact-component/contact.component');
 var ContactListComponent = (function () {
     function ContactListComponent(store) {
         this.store = store;
@@ -21,8 +21,8 @@ var ContactListComponent = (function () {
     ContactListComponent = __decorate([
         core_1.Component({
             selector: 'contact-list-component',
-            templateUrl: 'app/contact-list.html',
-            styleUrls: ['app/contact-list.css'],
+            templateUrl: 'app/contact-list-component/contact-list.html',
+            styleUrls: ['app/contact-list-component/contact-list.css'],
             directives: [contact_component_1.ContactComponent]
         }), 
         __metadata('design:paramtypes', [contact_store_1.ContactStore])

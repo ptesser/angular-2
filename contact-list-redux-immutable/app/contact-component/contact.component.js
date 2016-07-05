@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var contact_store_1 = require('./contact-store');
+var contact_store_1 = require('../contact-store');
 var ContactComponent = (function () {
     function ContactComponent(store) {
         this.store = store;
@@ -27,8 +27,8 @@ var ContactComponent = (function () {
     ContactComponent = __decorate([
         core_1.Component({
             selector: 'contact-component',
-            templateUrl: 'app/contact.html',
-            styleUrls: ['app/contact.css']
+            templateUrl: 'app/contact-component/contact.html',
+            styleUrls: ['app/contact-component/contact.css']
         }), 
         __metadata('design:paramtypes', [contact_store_1.ContactStore])
     ], ContactComponent);
