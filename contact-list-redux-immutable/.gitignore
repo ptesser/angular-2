@@ -1,0 +1,6 @@
+# External vendor to ignore
+node_modules/
+typings/
+
+# MacOS files to ignore
+.DS_Store
