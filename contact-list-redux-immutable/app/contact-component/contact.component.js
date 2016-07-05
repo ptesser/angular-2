@@ -28,7 +28,8 @@ var ContactComponent = (function () {
         core_1.Component({
             selector: 'contact-component',
             templateUrl: 'app/contact-component/contact.html',
-            styleUrls: ['app/contact-component/contact.css']
+            styleUrls: ['app/contact-component/contact.css'],
+            changeDetection: core_1.ChangeDetectionStrategy.OnPush
         }), 
         __metadata('design:paramtypes', [contact_store_1.ContactStore])
     ], ContactComponent);

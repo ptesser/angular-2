@@ -1,10 +1,11 @@
-import { Component, Input }                     from '@angular/core';
-import { ContactStore, Contact as ContactModel} from '../contact-store';
+import { Component, Input, ChangeDetectionStrategy }    from '@angular/core';
+import { ContactStore, Contact as ContactModel}         from '../contact-store';
 
 @Component({
     selector:       'contact-component',
     templateUrl :   'app/contact-component/contact.html',
-    styleUrls:      ['app/contact-component/contact.css']
+    styleUrls:      ['app/contact-component/contact.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 
 })
 
