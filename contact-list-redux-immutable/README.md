@@ -21,6 +21,12 @@ I follow the tutoral linked in References sections to see where insert main file
 
 Follow only **Step 1** section of the Quickstart.
 
+## Add NPM modules
+
+1. add module via **npm install --save [packageName]**;
+2. add module in **systemjs.config.js** in map object;
+
+
 ## References
 
 - http://houssein.me/redux/immutablejs/angular2/2016/07/04/angular2-with-immutablejs-and-redux.html: tutorial followed for this project
