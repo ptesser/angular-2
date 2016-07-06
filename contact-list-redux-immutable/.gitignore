@@ -4,3 +4,6 @@ typings/
 
 # MacOS files to ignore
 .DS_Store
+
+# Ignore js files produced by transpile
+*.js

@@ -1,3 +1,4 @@
+import Immutable = require('immutable');
 
 export class Contact {
     name: String;
@@ -6,11 +7,10 @@ export class Contact {
 
 export class ContactStore {
 
-    contacts: Contact[];
+    // https://facebook.github.io/immutable-js/docs/#/List
+    contacts = Immutable.List<Contact>();
 
-    constructor(){
-        this.contacts = [];
-    }
+    constructor(){}
 
     /**
      * Metodo che aggiunge un contattato alla lista.
@@ -20,8 +20,8 @@ export class ContactStore {
     addContact(newContact: String){
 
         if (newContact){
-
-            this.contacts.push({
+            // always generate a new array
+            this.contacts = this.contacts.push({
                 name: newContact,
                 star: false
             });
@@ -35,8 +35,8 @@ export class ContactStore {
      * @param {Contact} contact Oggetto contenente il contatto da rimuovere
      */
     removeContact(contact: Contact){
-        const index = this.contacts.indexOf(contact);
-        this.contacts.splice(index, 1);
+        const index     = this.contacts.indexOf(contact);
+        this.contacts   = this.contacts.delete(index);
     }
 
     /**
@@ -45,8 +45,15 @@ export class ContactStore {
      * @param {Contact} contact Oggetto contenente il contatto da togliere/aggiungere la star.
      */
     starContact(contact: Contact){
-        const index = this.contacts.indexOf(contact);
-        this.contacts[index].star = !this.contacts[index].star;
+        const index     = this.contacts.indexOf(contact);
+        // <any>: TypeScript type assertion to prevent compiler errors when returning an updated contact object
+        // References solution for this issue: https://github.com/facebook/immutable-js/issues/684#issuecomment-153812280
+        this.contacts   = (<any>this.contacts).update(index, (contact) => {
+            return {
+                name: contact.name,
+                star: !contact.star
+            }
+        });
     }
 
 }
