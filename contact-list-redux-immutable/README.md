@@ -4,6 +4,10 @@ This repository is used to manage code of a Contact List simple application crea
 
 This is done only for educational purpose.
 
+## Redux Design Pattern
+
+![Redux](./images/redux-dp.png)
+
 ## Configuration files
 - **package.json**: lists packages the Contact list app depends on and defines some useful scripts;
 - **tsconfig.json**: is the Typescript compiler configuration file;
