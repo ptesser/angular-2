@@ -1,6 +1,7 @@
 import { Component }        from '@angular/core';
 import { ContactStore }     from '../contact-store';
 import { ContactComponent } from '../contact-component/contact.component';
+import { addContact }       from '../actions';
 
 @Component({
     selector:       'contact-list-component',
@@ -11,10 +12,15 @@ import { ContactComponent } from '../contact-component/contact.component';
 
 export class ContactListComponent {
 
-    constructor(private store: ContactStore){}
+    contactID: number;
+
+    constructor(private store: ContactStore){
+        this.contactID = 0;
+    }
 
     addContact(contact) {
-        this.store.addContact(contact);
+        this.store.dispatch(addContact(contact, this.contactID++));
     }
+
 
 }
