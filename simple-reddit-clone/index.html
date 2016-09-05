@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <title>Angular 2 - Simple Reddit</title>
 
@@ -14,7 +15,8 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 
 </head>
-<body>
+
+<body class="ui container">
 
     <!-- Configure System.js, our module loader -->
     <script src="resources/systemjs.config.js"></script>
@@ -23,7 +25,9 @@
             .then(null, console.error.bind(console));
     </script>
 
-    <hello-world></hello-world>
+    <h1 class="ui header">Angular 2 Simple Reddit</h1>
+
+    <reddit></reddit>
 
 </body>
 </html>
