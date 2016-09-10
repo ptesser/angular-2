@@ -20,11 +20,11 @@ import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
  */
 class Product {
   constructor(
-    public sku: string,
-    public name: string,
-    public imageUrl: string,
-    public department: string[],
-    public price: number) {
+    public sku:         string,
+    public name:        string,
+    public imageUrl:    string,
+    public department:  string[],
+    public price:       number) {
   }
 }
 
@@ -33,8 +33,10 @@ class Product {
  */
 @Component({
   selector: 'product-image',
-  host: {class: 'ui small image'},
-  inputs: ['product'],
+  host:     {
+    class: 'ui small image'
+  },
+  inputs:   ['product'],
   template: `
   <img class="product-image" [src]="product.imageUrl">
   `
