@@ -21,33 +21,35 @@ import {
 `
 })
 export class MoreHTTPRequests {
-  data: Object;
-  loading: boolean;
+  data:     Object;
+  loading:  boolean;
 
   constructor(public http: Http) {
   }
 
   makePost(): void {
     this.loading = true;
+
     this.http.post(
       'http://jsonplaceholder.typicode.com/posts',
       JSON.stringify({
-        body: 'bar',
-        title: 'foo',
+        body:   'bar',
+        title:  'foo',
         userId: 1
       }))
       .subscribe((res: Response) => {
-        this.data = res.json();
-        this.loading = false;
+        this.data     = res.json();
+        this.loading  = false;
       });
   }
 
   makeDelete(): void {
     this.loading = true;
+
     this.http.delete('http://jsonplaceholder.typicode.com/posts/1')
       .subscribe((res: Response) => {
-        this.data = res.json();
-        this.loading = false;
+        this.data     = res.json();
+        this.loading  = false;
       });
   }
 
