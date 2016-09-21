@@ -4,8 +4,8 @@
 import {
   NgModule,
   Component
-} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+}                               from '@angular/core';
+import {BrowserModule}          from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {
   RouterModule,
@@ -16,9 +16,9 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 /*
  * Components
  */
-import {HomeComponent} from 'components/HomeComponent';
-import {AboutComponent} from 'components/AboutComponent';
-import {ContactComponent} from 'components/ContactComponent';
+import {HomeComponent}    from './components/HomeComponent';
+import {AboutComponent}   from './components/AboutComponent';
+import {ContactComponent} from './components/ContactComponent';
 
 /*
  * Webpack
@@ -34,7 +34,7 @@ require('css/styles.scss');
       <ul>
         <li><a [routerLink]="['home']">Home</a></li>
         <li><a [routerLink]="['about']">About</a></li>
-        <li><a [routerLink]="['contact']">Contact us</a></li>
+        <li><a [routerLink]="['contactus']">Contact us</a></li>
       </ul>
     </nav>
 
