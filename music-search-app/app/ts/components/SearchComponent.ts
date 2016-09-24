@@ -11,7 +11,7 @@ import {
 /*
  * Services
  */
-import {SpotifyService} from 'services/SpotifyService';
+import {SpotifyService} from '../services/SpotifyService';
 
 @Component({
   selector: 'search',
@@ -67,8 +67,8 @@ import {SpotifyService} from 'services/SpotifyService';
   `
 })
 export class SearchComponent implements OnInit {
-  query: string;
-  results: Object;
+  query:    string;
+  results:  Object;
 
   constructor(private spotify: SpotifyService,
               private router: Router,
