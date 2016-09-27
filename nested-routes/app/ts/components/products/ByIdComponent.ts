@@ -1,7 +1,7 @@
 /*
  * Angular
  */
-import { Component } from '@angular/core';
+import { Component }      from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

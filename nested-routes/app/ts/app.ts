@@ -1,9 +1,9 @@
 /*
  * Angular
  */
-import { Component } from '@angular/core';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { Component }              from '@angular/core';
+import { NgModule }               from '@angular/core';
+import { BrowserModule }          from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import {
   RouterModule,
@@ -18,12 +18,12 @@ import {
 /*
  * Components
  */
-import {HomeComponent} from 'components/HomeComponent';
+import {HomeComponent} from './components/HomeComponent';
 import {
   routes as childRoutes,
   ProductsComponent,
   ProductsComponentModule
-} from 'components/ProductsComponent';
+} from './components/ProductsComponent';
 
 /*
  * Webpack
